@@ -4,4 +4,4 @@
 
 Developing a preemptive priority scheduling algorithm for an operating system.
 
-Check out the [Project Description](https://github.com/hsnbsrbalaban/preemptive-priority-scheduling/blob/master/CMPE322-Project1_definition.pdf) for detailed information about the project.
+Check out the [Project Description](https://github.com/hsnbsrbalaban/CmpE-university-projects/blob/master/CmpE322-OperatingSystems/preemptive-priority-scheduling/CMPE322-Project1_definition.pdf) for detailed information about the project.

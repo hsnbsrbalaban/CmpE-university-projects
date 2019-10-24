@@ -2,7 +2,7 @@
 
 > This project is developed for the CMPE250 (Data Structures & Algorithms) course.
 
-Please check out [Project Description](https://github.com/hsnbsrbalaban/discrete-event-simulation/blob/master/Project2.pdf) for description of the project.
+Please check out [Project Description](https://github.com/hsnbsrbalaban/CmpE-university-projects/blob/master/CmpE250-DataStructuresAndAlgorithms/discrete-event-simulation/Project2.pdf) for description of the project.
 
 ## How to compile
 

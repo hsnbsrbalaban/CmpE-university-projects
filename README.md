@@ -1,1 +1,2 @@
-# CmpE-university-projects
+# Computer Engineering Undergraduate Projects
+>Some of my school projects :)

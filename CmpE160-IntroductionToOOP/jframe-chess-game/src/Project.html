@@ -1,0 +1,174 @@
+<html>
+<head>
+<link href="css/question.css" type="text/css" rel="stylesheet" />
+<title>Question (teaching.codes)</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>
+					Project-2
+				</h1>
+				<div>
+					Please read <a href="readMe.html">important information</a> first.
+				</div>
+				<div id="page1">
+					<h2>Description</h2>
+					<p>
+						In your second project, you will implement the rest of Chess game, and a few additional methods and moves. Please read below very carefullty.
+						You are given 3 classes:
+						<ul>
+							<li>
+								First of all, do not email us regarding your questions. Write your questions to this document. We will check it frequently and answer your questions through the document: <a href="https://docs.google.com/document/d/1xaSSdY2fjA-Px6XFAq5lzpNI2x7dc1obcwTdhStRsIk/edit?usp=sharing">https://docs.google.com/document/d/1xaSSdY2fjA-Px6XFAq5lzpNI2x7dc1obcwTdhStRsIk/edit?usp=sharing</a>
+							</li></br>
+							<li>
+								 Observe that the initial board configuration must be as follows: 
+								</br>
+								<img src="chess-board.jpg" alt="Chess Board" style="width:368px;height:368px;">
+								</br>
+							</li>
+							</br>
+							<li>
+								Complete the first project if you have not. So, you must implement the game according to Chess rules, turn based logic and fix the pawn behavior.
+							</li>
+							</br>
+							<li>
+								If necessary, modify your code in such a way that the following initiates the board:
+								<code></br>ChessFrame theFrame = new ChessFrame();</br>theFrame.setVisible(true);</code> 
+							</li>
+							</br>
+							<li>
+								Below are a number of functionalities you will implement. All of the methods must be implemented in <code>ChessFrame</code> class. While testing your code, we will use the methods you implement. So, make sure that the method signatures are correct; otherwise your code would not compile and you lose credit. Do not forget to implemet <a href="https://en.wikipedia.org/wiki/Promotion_(chess)">promotion</a>. Also, methods are to be called for current player. For example, when <code>move()</code> is called, you move a piece of the player who has the turn. 
+							</li>
+							</br>
+							<li>
+								<b>Method:</b> 
+								<code>
+									public boolean move(String from, String to)</br>
+								</code>
+								<b>Action:</b> Moves the piece at <code>from</code> to a new position specified in <code>to</code>.</br>
+								<b>Input:</b> Both <code>from</code> and <code>to</code> are strings of length 2. The first character is one of 'A,B,C,D,E,F,G,H' and the second char is one of '1,2,3,4,5,6,7,8'.</br>
+								<b>Return value:</b> If the move take place, the return value is true; otherwise, false. Observe that, if there is no piece at <code>from</code>, you return false.</br>
+								<b>Example:</b> <code></br>ChessFrame theFrame = new ChessFrame();</br>theFrame.setVisible(true);</br>theFrame.move("b1", "a3");</code>
+							</li>
+							</br>
+							<li>
+								<b>Method:</b> 
+								<code>
+									public String at(String pos)</br>
+								</code>
+								<b>Action:</b> Returns the information of the piece at <code>pos</code>.</br>
+								<b>Input:</b> A string of length 2, where the first character is one of 'A,B,C,D,E,F,G,H' and the second char is one of '1,2,3,4,5,6,7,8'.</br>
+								<b>Return value:</b> A string of the form 'xxx-yyy', where 'xxx' denotes the color of the piece (e.g. white/black) and 'yyy' represents the type of the piece (e.g.king/queen/rook/bishop/knight/pawn). If there is no piece at the specified position, return empty string: ''</br>
+								<b>Example:</b> <code></br>ChessFrame theFrame = new ChessFrame();</br>theFrame.setVisible(true);</br>theFrame.at("b1"); // returns "white-knight"</code>
+							</li>
+							</br>
+
+
+							<li>
+								<b>Method:</b> 
+								<code>
+									public boolean castling(boolean isKingSide)</br>
+								</code>
+								<b>Action:</b> Implement kingside and queenside <a href="https://en.wikipedia.org/wiki/Castling">castling</a>. Originally, <i>castling may only be done if the king has never moved, the rook involved has never moved, the squares between the king and the rook involved are unoccupied, the king is not in check, and the king does not cross over or end on a square in which it would be in check</i>. Ignore all of these rules for this project. You may safely assume that castling may be done as long as there the rook and the king are in their original positions, and there is no piece between them. That is to say, castling can occur if the pieces were moved some time during the game and got back their original positions.</br>
+								<b>Input:</b> A boolean that is true if the goal is a kingside castling.</br>
+								<b>Return value:</b> true, if move is successful; false, otherwise.</br>
+								<b>Example:</b> <code></br>ChessFrame theFrame = new ChessFrame();</br>theFrame.setVisible(true);</br>theFrame.casling(true);</code>
+							</li>
+							</br>
+
+
+
+							<li>
+								<b>Method:</b> 
+								<code>
+									public void undo()</br>
+								</code>
+								<b>Action:</b> Undos the last move. Note that this method may be used multiple times in a row. So, consider using stack.</br>
+								<b>Input:</b> -</br>
+								<b>Return value:</b> -</br>
+								<b>Example:</b> <code></br>ChessFrame theFrame = new ChessFrame();</br>theFrame.setVisible(true);</br>
+								// here some moves are done</br>theFrame.undo();</code>
+							</li>
+							</br>
+
+
+							<li>
+								<b>Method:</b> 
+								<code>
+									public boolean isInCheck()</br>
+								</code>
+								<b>Action:</b> Checks if the current player's king is threaten with capture.</br>
+								<b>Input:</b> -</br>
+								<b>Return value:</b> true, if the king is threaten; false, otherwise </br>
+								<b>Example:</b> <code></br>ChessFrame theFrame = new ChessFrame();</br>theFrame.setVisible(true);</br>theFrame.isInCheck();</code>
+							</li>
+							</br>
+
+
+							<li>
+								<b>Method:</b> 
+								<code>
+									public boolean isCheckmate()</br>
+								</code>
+								<b>Action:</b> Checks if the current player has no move to save its king from being captured.</br>
+								<b>Input:</b> -</br>
+								<b>Return value:</b> true, if the game is over; false, otherwise </br>
+								<b>Example:</b> <code></br>ChessFrame theFrame = new ChessFrame();</br>theFrame.setVisible(true);</br>theFrame.isCheckmate();</code>
+							</li>
+							</br>
+
+							<li>
+								<b>Method:</b> 
+								<code>
+									public void save(String fileName)</br>
+								</code>
+								<b>Action:</b> Saves the current status of the game to a file whose path is given as parameter. The first line of the file is the color of the player that has the turn. Each of the following line, having the format 'xxx-yyy-zzz', stores the information of a piece on the table where 'xxx' denotes the color of the piece (e.g. white/black) and 'yyy' represents the type of the piece (e.g.king/queen/rook/bishop/knight/pawn) and 'zzz' is the position (a string of length 2, where the first character is one of 'A,B,C,D,E,F,G,H' and the second char is one of '1,2,3,4,5,6,7,8')</br>
+								<b>Input:</b> The path of the file.</br>
+								<b>Return value:</b> -</br>
+								<b>Example:</b> <code></br>ChessFrame theFrame = new ChessFrame();</br>theFrame.setVisible(true);theFrame.save("/home/game.txt");</br></code>
+								The output file looks like this:</br>
+								<i>black</br>white-rook-a1</br>white-knight-b1</br>black-pawn-d5</br>...</i>
+							</li>
+							</br>
+
+
+							<li>
+								<b>Method:</b> 
+								<code>
+									public static ChessFrame load(String fileName)</br>
+								</code>
+								<b>Action:</b> Loads the <code>ChessFrame</code> instance previously saved to the file given in parameter</br>
+								<b>Input:</b> The path of the file to be loaded.</br>
+								<b>Return value:</b> The <code>ChessFrame</code> instance, i.e., the game itself.</br>
+								<b>Example:</b> <code></br>ChessFrame theFrame = ChessFrame.load("/home/game.txt");</br></code>
+							</li>
+							</br>		
+
+							<li>
+								Below is a very simple test case that is similar to what we are going to use for testing your code:
+								<code></br>
+									ChessFrame theFrame = new ChessFrame();</br>
+									theFrame.setVisible(true);</br>
+									// we will check the positions of pieces using at() method</br>
+									// we will make a number of moves using move() method. after each move, we will check the position of the piece.</br>
+									// here, we will perform several undo operations using undo() method and check board configurations using at() method.</br>
+									// here, we will load a new board configuration using load() method. The board configuration will be one that we previously created. we will then run your castling()/isInCheck()/isCheckmate() method and check the positions again</br>
+									// we hope you get the idea.</br>
+								</code>
+							</li>
+							</br>					
+						</ul>						
+					</p>
+				</div>
+				<div>
+					<h2>Package classification</h2>
+					This is the package classification described in <a
+						href="readMe.html">important information</a>.
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

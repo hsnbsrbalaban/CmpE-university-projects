@@ -1,0 +1,15 @@
+0:HEAD--TAIL
+40:HEAD-P4[1]-P3[1]-P2[1]-P1[1]-TAIL
+190:HEAD-P3[1]-P2[1]-P1[1]-TAIL
+370:HEAD-P2[1]-P1[1]-TAIL
+630:HEAD-P1[1]-TAIL
+810:HEAD--TAIL
+
+Turnaround time for P1 = 770 ms
+Waiting time for P1 = 590
+Turnaround time for P2 = 590 ms
+Waiting time for P2 = 330
+Turnaround time for P3 = 330 ms
+Waiting time for P3 = 150
+Turnaround time for P4 = 150 ms
+Waiting time for P4 = 0

@@ -1,0 +1,5 @@
+instr1	40
+instr2	50
+instr3	20
+instr4	30
+exit	10

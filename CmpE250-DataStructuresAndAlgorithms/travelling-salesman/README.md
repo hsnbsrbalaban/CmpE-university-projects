@@ -2,7 +2,7 @@
 
 > This project is developed for the CMPE250 (Data Structures & Algorithms) course.
 
-Please check out [Project Description](https://github.com/hsnbsrbalaban/travelling-salesman/blob/master/Project3.pdf) for description of the project.
+Please check out [Project Description](https://github.com/hsnbsrbalaban/CmpE-university-projects/blob/master/CmpE250-DataStructuresAndAlgorithms/travelling-salesman/Project3.pdf) for description of the project.
 
 ## How to compile
 
